@@ -10,11 +10,15 @@ public class DataBase {
     private static DataBase instance;
 
     private ArrayList<Jogador> jogadores = new ArrayList<>();
+
     private ArrayList<Jogos> jogos = new ArrayList<>();
+
     private ArrayList<Ranque> ranque = new ArrayList<>();
+
 
     private DataBase() {
     }
+
 
     public static DataBase getInstance() {
         if (instance == null) {
@@ -24,29 +28,39 @@ public class DataBase {
     }
 
 
-    public ArrayList<Jogador> getJogadores(){
-        return this.jogadores;
+    public ArrayList<Jogador> getJogadores() {
+        return new ArrayList<>(jogadores);
     }
 
     public int getQtdJogadores() {
         return jogadores.size();
     }
 
+    public void add(Jogador jogadorInput) {
+        jogadores.add(jogadorInput);
+    }
 
     public ArrayList<Jogos> getJogos() {
-        return this.jogos;
+        return new ArrayList<>(jogos);
     }
 
     public int getQtdJogos() {
         return jogos.size();
     }
 
+    public void add(Jogos jogoInput) {
+        jogos.add(jogoInput);
+    }
 
     public ArrayList<Ranque> getRanque() {
-        return this.ranque;
+        return new ArrayList<>(ranque);
     }
 
     public int getQtdRanque() {
         return ranque.size();
+    }
+
+    public void add(Ranque ranqueInput) {
+        ranque.add(ranqueInput);
     }
 }
