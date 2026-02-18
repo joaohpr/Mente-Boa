@@ -1,7 +1,7 @@
 package db;
 
 import java.util.ArrayList;
-import model.Jogos;
+import model.Jogo;
 import model.Ranque;
 import model.Jogador;
 
@@ -11,7 +11,7 @@ public class DataBase {
 
     private ArrayList<Jogador> jogadores = new ArrayList<>();
 
-    private ArrayList<Jogos> jogos = new ArrayList<>();
+    private ArrayList<Jogo> jogos = new ArrayList<>();
 
     private ArrayList<Ranque> ranque = new ArrayList<>();
 
@@ -40,7 +40,7 @@ public class DataBase {
         jogadores.add(jogadorInput);
     }
 
-    public ArrayList<Jogos> getJogos() {
+    public ArrayList<Jogo> getJogos() {
         return new ArrayList<>(jogos);
     }
 
@@ -48,7 +48,7 @@ public class DataBase {
         return jogos.size();
     }
 
-    public void add(Jogos jogoInput) {
+    public void add(Jogo jogoInput) {
         jogos.add(jogoInput);
     }
 

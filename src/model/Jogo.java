@@ -1,18 +1,22 @@
 package model;
 
-public class Jogos {
+import java.util.Random;
+
+public class Jogo {
 
     private Jogador jogador = new Jogador();
     private int score;
     private int codeId;
 
+    Random aleatorio = new Random();
 
-    public Jogos() {}
 
-    public Jogos(Jogador jogador, int score, int codeId) {
+    public Jogo() {}
+
+    public Jogo(Jogador jogador, int score, int codeId) {
         this.jogador = jogador;
         this.score = score;
-        this.codeId = codeId;
+        this.codeId = aleatorio.nextInt(9999999)+1;
     }
 
 
