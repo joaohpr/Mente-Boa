@@ -1,17 +1,15 @@
 package model;
 
-import model.Jogador;
-
-public class Jogo {
+public class Jogos {
 
     private Jogador jogador = new Jogador();
     private int score;
     private int codeId;
 
 
-    public Jogo() {}
+    public Jogos() {}
 
-    public Jogo(Jogador jogador,int score,int codeId) {
+    public Jogos(Jogador jogador, int score, int codeId) {
         this.jogador = jogador;
         this.score = score;
         this.codeId = codeId;
